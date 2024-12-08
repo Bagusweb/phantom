@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ========== Favicon Image========== -->
+    <link rel="shortcut icon" href="../../Images/favicon.png" type="image/x-icon" />
+    <!-- ========== Box Icons CDN ========== -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- ========== Custom Styling ========== -->
+    <link rel="stylesheet" href="../../Styles/index.css" />
+    <title>Cart | Phantom Phone</title>
+  </head>
+  <body>
+    <!-- ========== Header ========== -->
+    <header class="header header-scrolled" id="header">
+      <nav class="navbar">
+        <i class="bx bx-menu toggle__menu" id="toggle-menu"></i>
+
+        <a href="../../../index.html" class="navbar__logo"> PHANTOM </a>
+
+        <div class="navbar__menu">
+          <ul class="navbar__container">
+            <li class="navbar__item">
+              <a href="../../../index.html" class="navbar__link">
+                <span>Home</span>
+                <i class="bx bxs-home"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="../../../index.html#about" class="navbar__link">
+                <span>What's New</span>
+                <i class="bx bxs-megaphone"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="../../../index.html#products" class="navbar__link active-link">
+                <span>Products</span>
+                <i class="bx bxs-shopping-bag"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="../../../index.html#features" class="navbar__link">
+                <span>Features</span>
+                <i class="bx bxs-devices"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="../../../index.html#article" class="navbar__link">
+                <span>Article</span>
+                <i class="bx bxs-news"></i>
+              </a>
+            </li>
+            <li class="navbar__item">
+              <a href="../../../index.html#contact" class="navbar__link">
+                <span>Contact</span>
+                <i class="bx bxs-phone"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="../login-pages/login.html" class="button navbar__button">Sign In</a>
+      </nav>
+    </header>
+
+    <!-- ========== Cart ========== -->
+    <section class="cart section" id="cart">
+      <div class="cart__container container grid">
+        <div class="cart__images">
+          <img src="../../Images/buy-10.png" alt="Cart Images" />
+        </div>
+
+        <div class="cart__content">
+          <div class="cart__header">
+            <h1 class="cart__header-title">Phantom Nitro Z8</h1>
+            <div class="cart__header-reviews">
+              <div class="cart__stars">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+              <span class="cart__review-title"></span>
+            </div>
+            <div class="cart__prices">
+              <h2 class="cart__prices-before" id="prices-before">$188.73</h2>
+              <h2 class="cart__prices-after" id="prices-after">$150.98</h2>
+            </div>
+          </div>
+
+          <div class="cart__options">
+            <button class="cart__option-button active-option" id="color-button">Colors</button>
+            <button class="cart__option-button" id="spec-button">Specification</button>
+            <button class="cart__option-button" id="details-button">Details</button>
+          </div>
+
+          <div class="cart__color" id="cart-color">
+            <span class="red">
+              <span></span>
+              Red
+            </span>
+            <span class="purple">
+              <span></span>
+              Purple
+            </span>
+            <span class="lightblue">
+              <span></span>
+              Light Blue
+            </span>
+            <span class="green">
+              <span></span>
+              Green
+            </span>
+            <span class="dark">
+              <span></span>
+              Dark
+            </span>
+          </div>
+
+          <div class="cart__spec" id="cart-spec">
+            <div>
+              <h3 class="cart__spec-title">RAM :</h3>
+              <div class="cart__spec-options">
+                <div class="cart__spec-option active-spec">6</div>
+                <div class="cart__spec-option">8</div>
+                <div class="cart__spec-option">12</div>
+                <div class="cart__spec-option">16</div>
+              </div>
+            </div>
+            <div>
+              <h3 class="cart__spec-title">Storage :</h3>
+              <div class="cart__spec-options">
+                <div class="cart__spec-option active-spec">64</div>
+                <div class="cart__spec-option">128</div>
+                <div class="cart__spec-option">256</div>
+                <div class="cart__spec-option">512</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart__details" id="cart-details">
+            <p>Introducing Smartphone with the most smooth camera and great result of photos</p>
+          </div>
+
+          <div class="cart__result">
+            <h2></h2>
+          </div>
+
+          <div class="cart__add">
+            <button class="cart__add-quantity">
+              <i class="bx bx-minus" onclick="decreaseQuantity()"></i>
+              <div id="display">1</div>
+              <i class="bx bx-plus" onclick="increaseQuantity()"></i>
+            </button>
+            <button class="cart__add-button" onclick="cartResultText()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart__description">
+        <h1 class="cart__description-title">20% On Your First Purchase</h1>
+        <p class="card__description-text">
+          As explained on the feature section of the website, we will give a discount of 20% to anyone who buys our smartphone for the first time, especially for the first purchase of a Phantom smartphone!
+        </p>
+      </div>
+    </section>
+
+    <!--==================== Footer ====================-->
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div class="footer__text-container">
+          <a href="#" class="footer__logo">PHANTOM</a>
+          <p class="footer__description">
+            Our vision is to bring a <br />
+            new change of technologies.
+          </p>
+        </div>
+
+        <div class="footer__content">
+          <div>
+            <h3 class="footer__title">About</h3>
+
+            <ul class="footer__links">
+              <li class="footer__item">
+                <a href="#" class="footer__link">About Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Features</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">News & Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Company</h3>
+
+            <ul class="footer__links">
+              <li class="footer__item">
+                <a href="#" class="footer__link">How we work?</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Products</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Security</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Support</h3>
+
+            <ul class="footer__links">
+              <li class="footer__item">
+                <a href="#" class="footer__link">FAQs</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Support Center</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Follow Us</h3>
+
+            <ul class="footer__socials">
+              <li class="footer__item">
+                <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                  <i class="bx bxl-facebook-circle"></i>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="https://www.twitter.com/" target="_blank" class="footer__social-link">
+                  <i class="bx bxl-twitter"></i>
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="https://www.pinterest.com/" target="_blank" class="footer__social-link">
+                  <i class="bx bxl-pinterest"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__info container">
+        <span class="footer__copyright"> &copy; Copyright 2022 Phantom. All rights reserved </span>
+
+        <div class="footer__privacy">
+          <a href="#">Terms & Agreements</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /*=============== Declare DOM ===============*/
+      const cartColor = document.getElementById("cart-color");
+      const cartSpec = document.getElementById("cart-spec");
+      const cartDetails = document.getElementById("cart-details");
+      const colorButton = document.getElementById("color-button");
+      const specButton = document.getElementById("spec-button");
+      const detailsButton = document.getElementById("details-button");
+      const plusButton = document.getElementById("plus");
+      const minusButton = document.getElementById("minus");
+      const displayQuantity = document.getElementById("display");
+      const priceBeforeDisplay = document.getElementById("prices-before");
+      const pricesAfterDisplay = document.getElementById("prices-after");
+      const specOptions1 = document.querySelectorAll(".cart__spec-option-1");
+      const specOptions2 = document.querySelectorAll(".cart__spec-option-2");
+      const cartReview = document.querySelector(".cart__review-title");
+      const cartResult = document.querySelector(".cart__result h2");
+
+      /*=============== Declare Changeable Value ===============*/
+      let quantityValue = 1;
+      let priceBefore = 188.73;
+      let priceAfter = priceBefore - (priceBefore * 20) / 100;
+
+      /*=============== Switching to Color Options ===============*/
+      colorButton.addEventListener("click", () => {
+        specButton.classList.remove("active-option");
+        detailsButton.classList.remove("active-option");
+        colorButton.classList.add("active-option");
+
+        cartDetails.style.display = "none";
+        cartSpec.style.display = "none";
+        cartColor.style.display = "grid";
+      });
+
+      /*=============== Switching to Specifications Options ===============*/
+      specButton.addEventListener("click", () => {
+        colorButton.classList.remove("active-option");
+        detailsButton.classList.remove("active-option");
+        specButton.classList.add("active-option");
+
+        cartDetails.style.display = "none";
+        cartColor.style.display = "none";
+        cartSpec.style.display = "flex";
+      });
+
+      /*=============== Switching to Specifications Options ===============*/
+      detailsButton.addEventListener("click", () => {
+        specButton.classList.remove("active-option");
+        colorButton.classList.remove("active-option");
+        detailsButton.classList.add("active-option");
+
+        cartColor.style.display = "none";
+        cartSpec.style.display = "none";
+        cartDetails.style.display = "block";
+      });
+
+      /*=============== Increase Price and Amount ===============*/
+      function increaseQuantity() {
+        quantityValue++;
+
+        displayQuantity.innerHTML = quantityValue;
+        priceBeforeDisplay.innerHTML = "$" + (priceBefore * quantityValue).toFixed(2);
+        pricesAfterDisplay.innerHTML = "$" + (priceAfter * quantityValue).toFixed(2);
+      }
+
+      /*=============== Decrease Price and Amount ===============*/
+      function decreaseQuantity() {
+        quantityValue === 0 ? quantityValue : quantityValue--;
+
+        displayQuantity.innerHTML = quantityValue;
+        priceBeforeDisplay.innerHTML = "$" + (priceBefore * quantityValue).toFixed(2);
+        pricesAfterDisplay.innerHTML = "$" + (priceAfter * quantityValue).toFixed(2);
+      }
+
+      /*=============== Make Dummy Views ===============*/
+      cartReview.innerHTML = Math.floor(Math.random() * 100000) + " Reviews";
+
+      /*=============== Adding Result Text After Click "Add To Cart"===============*/
+      function cartResultText() {
+        if (quantityValue === 0) {
+          cartResult.textContent = "lu olang mau serius beli? atau oe hantam lu punya lan chiao";
+          cartResult.classList.remove("green");
+          cartResult.classList.add("red");
+          setTimeout(() => {
+            cartResult.textContent = "";
+          }, 3000);
+        } else {
+          cartResult.textContent = "Congratulations! Successed Adding Your Items Into Cart";
+          cartResult.classList.remove("red");
+          cartResult.classList.add("green");
+          setTimeout(() => {
+            cartResult.textContent = "";
+          }, 3000);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: Phantom;
+  src: url(../font-phantom/DDT\ W00\ Condensed\ SemiBold.ttf);
+}
+
+:root {
+  --header-height: 5rem;
+
+  /* ===== Blue Color Pallete ===== */
+  /* --color-primary: hsl(241, 100%, 11%);
+      --color-secondary: hsl(241, 100%, 11%);
+      --color-accent: hsl(61, 100%, 53%);
+      --color-white: hsl(0, 0%, 100%); */
+
+  /* ===== Black Color Pallete ===== */
+  --color-primary: hsl(0, 0%, 0%);
+  --color-secondary: hsl(0, 0%, 7%);
+  --color-accent: hsl(25, 83%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light: hsl(228, 15%, 50%);
+  --color-light-alt: hsl(228, 99%, 98%);
+  --color-dark-blue: hsl(228, 66%, 47%);
+
+  /* ===== Font And Typography ===== */
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 4rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  /* ===== Font Weight ===== */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* Z - Index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* ========== General Styles ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../Images/login-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: center;
+  align-items: center;
+}
+
+.login__logo {
+  font-family: Phantom;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-size: 3rem;
+}
+
+.login__box {
+  background-color: var(--color-white);
+  height: fit-content;
+  width: 100%;
+  border-radius: 0.15rem;
+  margin: auto;
+  padding: 3rem;
+}
+
+.login__box-title {
+  font-size: 2.5rem;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.75rem;
+}
+
+.login__box-register {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.login__box-register span {
+  color: var(--color-dark-blue);
+  cursor: pointer;
+}
+
+.login__box-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__box-label {
+  font-size: 0.75rem;
+  color: var(--color-light);
+  margin-bottom: 0.85rem;
+}
+
+.login__box-input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--color-light);
+  transition: 0.1s;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.login__box-input:focus {
+  border-bottom: 2px solid var(--color-dark-blue);
+}
+
+.login__box-button {
+  margin-top: 1.15rem;
+  display: inline-flex;
+  align-self: flex-end;
+  padding: 0.65rem 1rem;
+  justify-content: center;
+  width: 20%;
+  background-color: var(--color-dark-blue);
+  border-radius: 2.5rem;
+  font-weight: var(--font-semi-bold);
+  outline: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login__box-or {
+  display: inline-flex;
+  font-size: 1rem;
+  color: var(--color-light);
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.button__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.button__container button {
+  border-radius: 3rem;
+  padding: 1rem 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  outline: none;
+  font-weight: var(--font-bold);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.button__container button img {
+  width: 26px;
+  height: 26px;
+}
+
+.google__button {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 2px solid hsl(220, 4%, 84%);
+}
+
+.facebook__button {
+  background-color: #1777f2;
+  color: var(--color-white);
+  border: none;
+}
+
+.login__box-help {
+  color: var(--color-dark-blue);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1450px) and (min-width: 1350px) {
+  .content {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .login__box-button {
+    width: 30%;
+    font-size: 0.85rem;
+  }
+
+  .login__box-title {
+    font-size: 1.75rem;
+  }
+
+  .login__box-register {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .login__logo {
+    height: 15vh;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .login__box {
+    width: 60%;
+  }
+
+  .login__box-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .login__box {
+    width: 90%;
+  }
+
+  .login__box-button {
+    align-self: center;
+    width: 50%;
+  }
+
+  .button__container button {
+    font-size: 0.85rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .button__container button img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .login__box-help {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
